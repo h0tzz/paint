@@ -1,11 +1,6 @@
-import Tool from "./Tool";
 import Brush from "./Brush";
 
 export default class Eraser extends Brush {
-    constructor(canvas:HTMLCanvasElement) {
-        super(canvas);
-    }
-
 
     draw(x: number, y: number) {
         this.ctx.strokeStyle = "white"

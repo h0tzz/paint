@@ -1,8 +1,9 @@
 import Tool from "./Tool";
-import React from 'react';
+
 
 
 export default class Brush extends Tool {
+
     mouseDown: boolean = false;
 
     constructor(canvas:HTMLCanvasElement) {

@@ -1,8 +1,10 @@
 import Tool from "./Tool";
-import React from 'react';
 
 
 export default class Rect extends Tool {
+    static staticDraw(ctx: CanvasRenderingContext2D, x: any, y: any, width: any, height: any, color: any) {
+        throw new Error("Method not implemented.");
+    }
     mouseDown: boolean = false;
     startX: number;
     startY: number;
@@ -37,8 +39,6 @@ export default class Rect extends Tool {
         let currentY = e.pageY - e.target.offsetTop
         let width = currentX - this.startX
         let heigth = currentY - this.startY
-        let x:number = e.pageX - e.target.offsetLeft
-        let y:number = e.pageY - e.target.offsetTop
         if(this.mouseDown) {
             this.draw(this.startX,this.startY, width, heigth)
         }
