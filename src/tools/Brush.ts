@@ -1,13 +1,5 @@
 import Tool from "./Tool";
 import React from 'react';
-interface eI {
-    pageX: number;
-    target: {
-        offsetLeft: number;
-        offsetTop: number;
-    };
-    pageY: number;
-}
 
 
 export default class Brush extends Tool {

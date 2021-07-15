@@ -1,14 +1,18 @@
 import {makeAutoObservable} from "mobx";
+
+// tools
 import Brush from "../tools/Brush";
+import Rect from "../tools/Rect";
+
 
 class ToolState {
-    tool: Brush;
+    tool: Brush | Rect
 
     constructor() {
         makeAutoObservable(this)
     }
 
-    setTool(tool: Brush) {
+    setTool(tool: Brush | Rect) {
         this.tool = tool
     }
 }
