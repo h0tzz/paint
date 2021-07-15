@@ -47,7 +47,7 @@ export default class Rect extends Tool {
     draw(x:number,y:number,w:number,h:number) {
         const img = new Image()
         img.src = this.saved
-        img.onload = () => {
+        img.onload = async () => {
             this.ctx.clearRect(0,0, this.canvas.width, this.canvas.height)
             this.ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height)
             this.ctx.beginPath()
